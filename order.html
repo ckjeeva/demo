@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Jeevan Sketch Art</h1>
+</nav>
+
+<section class="order">
+    <h2>Place Your Order</h2>
+
+    <div class="form-container">
+
+        <label>Portrait Type</label>
+        <select id="type" onchange="calculatePrice()">
+            <option value="199">Single Portrait - ₹199</option>
+            <option value="499">Couple Portrait - ₹499</option>
+            <option value="899">Family Portrait - ₹899</option>
+            <option value="149">Pet Portrait - ₹149</option>
+        </select>
+
+        <label>Paper Size</label>
+        <select id="size">
+            <option>A4</option>
+            <option>A3</option>
+            <option>A2</option>
+        </select>
+
+        <label>Upload Reference Image</label>
+        <input type="file" id="image">
+
+        <textarea id="req" placeholder="Special Requirements"></textarea>
+
+        <h3>Total Price: ₹<span id="price">199</span></h3>
+
+        <button onclick="goToPayment()">Proceed to Payment</button>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
