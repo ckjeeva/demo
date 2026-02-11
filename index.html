@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeevan Sketch Art</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ff6ec4,#7873f5);
+    color:#fff;
+    transition:0.5s;
+}
+
+/* DARK MODE */
+body.dark{
+    background:#111;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h1{
+    font-size:22px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+.toggle-btn{
+    cursor:pointer;
+    padding:5px 10px;
+    background:#ffd700;
+    border-radius:20px;
+    color:#000;
+    font-size:14px;
+}
+
+/* LOGIN PAGE */
+.login{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:rgba(255,255,255,0.2);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    text-align:center;
+    animation:fadeIn 1.5s;
+}
+
+.login-box input{
+    width:100%;
+    padding:10px;
+    margin:15px 0;
+    border-radius:10px;
+    border:none;
+}
+
+.login-box button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ffd700;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* MAIN CONTENT */
+.main{
+    display:none;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ffd700;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* GALLERY */
+.gallery{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.1);
+}
+
+/* PRICING */
+.pricing{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.price-cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.2);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    width:250px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/* ORDER */
+.order{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.form-container{
+    max-width:500px;
+    margin:auto;
+}
+
+select, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+    border:none;
+}
+
+.order button{
+    padding:12px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ffd700;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    padding:20px;
+    text-align:center;
+    background:#000;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<section class="login" id="loginPage">
+    <div class="login-box">
+        <h2>Login to Jeevan Sketch Art</h2>
+        <input type="email" id="email" placeholder="Enter your Email">
+        <button onclick="login()">Login</button>
+    </div>
+</section>
+
+<!-- MAIN WEBSITE -->
+<div class="main" id="mainSite">
+
+<nav>
+    <h1>Jeevan Sketch Art</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#order">Order</a></li>
+    </ul>
+    <div class="toggle-btn" onclick="toggleDark()">Mode</div>
+</nav>
+
+<section class="hero">
+    <h2>Handmade Sketch Portraits</h2>
+    <p>Professional and emotional pencil art.</p>
+    <button onclick="document.getElementById('order').scrollIntoView()">Order Now</button>
+</section>
+
+<section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <img src="https://via.placeholder.com/300" alt="">
+        <img src="https://via.placeholder.com/300" alt="">
+        <img src="https://via.placeholder.com/300" alt="">
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <h2>Pricing</h2>
+    <div class="price-cards">
+        <div class="card">
+            <h3>Single</h3>
+            <p>₹999</p>
+        </div>
+        <div class="card">
+            <h3>Couple</h3>
+            <p>₹1499</p>
+        </div>
+        <div class="card">
+            <h3>Family</h3>
+            <p>₹1999</p>
+        </div>
+    </div>
+</section>
+
+<section class="order" id="order">
+    <h2>Place Order</h2>
+    <div class="form-container">
+        <select id="type">
+            <option>Single Portrait</option>
+            <option>Couple Portrait</option>
+            <option>Family Portrait</option>
+            <option>Pet Portrait</option>
+        </select>
+
+        <select id="size">
+            <option>A4 Size</option>
+            <option>A3 Size</option>
+            <option>A2 Size</option>
+        </select>
+
+        <textarea id="req" rows="4" placeholder="Special Requirements"></textarea>
+
+        <button onclick="sendWhatsApp()">Confirm via WhatsApp</button>
+    </div>
+</section>
+
+<footer>
+© 2026 Jeevan Sketch Art
+</footer>
+
+</div>
+
+<script>
+
+function login(){
+    let email=document.getElementById("email").value;
+    if(email===""){
+        alert("Please enter email");
+    }else{
+        document.getElementById("loginPage").style.display="none";
+        document.getElementById("mainSite").style.display="block";
+    }
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+function sendWhatsApp(){
+    let type=document.getElementById("type").value;
+    let size=document.getElementById("size").value;
+    let req=document.getElementById("req").value;
+
+    let message=`Hello Jeevan, I want to order:\nType: ${type}\nSize: ${size}\nRequirement: ${req}`;
+    let phone="+919591638515";
+
+    let url=`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url,"_blank");
+}
+
+</script>
+
+</body>
+</html>
