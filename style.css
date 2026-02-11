@@ -3,6 +3,7 @@
     padding:100;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 }
 
 body{
@@ -93,3 +94,4 @@ footer{
     padding:20px;
     background:#000;
 }
+
