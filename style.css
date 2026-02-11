@@ -1,97 +1,157 @@
+/* ===== GLOBAL RESET ===== */
 *{
-    margin:100;
-    padding:100;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* ===== BODY ===== */
 body{
-    background:linear-gradient(135deg,#ff6ec4,#7873f5);
-    color:#fff;
+    background: linear-gradient(135deg,#ff6ec4,#7873f5);
+    color: #fff;
+    min-height: 100vh;
 }
 
+/* ===== NAVIGATION ===== */
 nav{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 40px;
-    background:rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.5);
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
+    display: flex;
+    list-style: none;
 }
 
 nav ul li{
-    margin-left:20px;
+    margin-left: 20px;
 }
 
 nav a{
-    color:#fff;
-    text-decoration:none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+nav a:hover{
+    color: #ffd700;
+}
+
+/* ===== SECTIONS ===== */
 .hero, .gallery, .pricing, .order{
-    padding:80px 20px;
-    text-align:center;
+    padding: 80px 20px;
+    text-align: center;
 }
 
+/* ===== BUTTON ===== */
 button{
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
-    background:#ffd700;
-    cursor:pointer;
-    font-weight:bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ffd700;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+button:hover{
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* ===== GALLERY ===== */
 .gallery-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
 }
 
 .gallery img{
-    width:100%;
-    border-radius:10px;
+    width: 100%;
+    border-radius: 10px;
 }
 
+/* ===== PRICING ===== */
 .card{
-    background:rgba(255,255,255,0.2);
-    padding:20px;
-    border-radius:15px;
-    width:200px;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
 }
 
 .price-cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* ===== FORM ===== */
 .form-container{
-    max-width:500px;
-    margin:auto;
+    max-width: 500px;
+    margin: auto;
 }
 
 select, textarea, input{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border-radius:10px;
-    border:none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
 }
 
+/* ===== ERROR TEXT ===== */
 .error{
-    color:yellow;
-    font-size:12px;
+    color: yellow;
+    font-size: 12px;
 }
 
+/* ===== FOOTER ===== */
 footer{
-    text-align:center;
-    padding:20px;
-    background:#000;
+    text-align: center;
+    padding: 20px;
+    background: #000;
 }
 
+/* ========================= */
+/* ===== LOGIN PAGE ===== */
+/* ========================= */
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box{
+    background: rgba(255,255,255,0.2);
+    padding: 40px;
+    width: 350px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.login-box h2{
+    margin-bottom: 20px;
+}
+
+.login-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+}
+
+.login-box button{
+    width: 100%;
+    margin-top: 10px;
+}
