@@ -9,7 +9,9 @@ function login() {
 
     emailError.innerText = "";
     passwordError.innerText = "";
-
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     let passwordPattern = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
 
@@ -91,3 +93,4 @@ Requirement: ${req}`;
     let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
 }
+
